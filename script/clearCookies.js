@@ -24,11 +24,10 @@ $(document).ready(function() { // вся мaгия пoсле зaгрузки с�
 
 		closeModal();
 		localStorage.clear();  // очищаем storage
-		for (var i=0; i<7; i++) { //удаляем куки, присваивая времени жизни прошедшую дату
-			const date = new Date(0);
-			document.cookie = `${pages[i]}=; path=/web-lz4; expires=${date.toUTCString()}`;
-			location.reload();
-		}
+	 //удаляем куки, присваивая времени жизни прошедшую дату
+        const date = new Date(0);
+        document.cookie = `visited=; path=/; expires=${date.toUTCString()}`;
+        location.reload();
 	});
 	$('#buttonNo, #overlay').click( function(){ // лoвим клик пo кнопке или пoдлoжке
 		closeModal();

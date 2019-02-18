@@ -35,7 +35,7 @@ var allTimeHistory = $("#allTimeHistory")[0];
 if (currentHistory != null) {
     for (var i = 0; i < 8; i++) {
         currentHistory.rows[(i + 2)].cells[0].innerText = localStorage.key(i);
-        currentHistory.rows[(i + 2)].cells[1].innerText = localStorage[localStorage.key(i)];
+        currentHistory.rows[(i + 2)].cells[1].innerText = localStorage[localStorage.key(i)] ? localStorage[localStorage.key(i)] : null;
     }
 }
 if (allTimeHistory != null) {
